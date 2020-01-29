@@ -141,6 +141,7 @@ class EventingBaseTest(QueryHelperTests, BaseTestCase):
         body['settings']['execution_timeout'] = execution_timeout
         body['settings']['data_chan_size'] = data_chan_size
         body['settings']['worker_queue_cap'] = worker_queue_cap
+        body['settings']['n1ql_prepare_all'] = false
         # See MB-27967, the reason for adding this config
         body['settings']['use_memory_manager'] = self.use_memory_manager
         # since deadline_timeout has to always greater than execution_timeout
